@@ -3,6 +3,7 @@
 */
 
 // This is the decorator pattern almost. 
+// It is giving me nightmars.
 func outerFunc(x: Int) {
     
     func innerFunc(y: Int) -> Int {

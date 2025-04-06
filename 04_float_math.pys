@@ -1,0 +1,32 @@
+/ *
+* Shows floating math
+*/
+
+
+
+func main() {
+    var x: Float = 10.5;
+    var y: Float = 2.0;
+
+    
+
+    var fSum: Float = x + y;
+    print("Sum: "); 
+    print(fSum); // shows 12.5
+    print("\n");
+
+    var fDiff: Float = x - y;
+    print("Difference: "); 
+    print(fDiff); 
+    print("\n");
+
+    var fProd: Float = x * y;
+    print("Product: "); 
+    print(fProd); 
+    print("\n");
+
+    var fQuot: Float = x / y;
+    print("Quotient: "); 
+    print(fQuot); //should show that float number 5.25
+    print("\n");
+}

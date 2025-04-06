@@ -1,0 +1,37 @@
+/*
+* Shows a simple function to multiply
+* Shows a function with no return
+*/
+
+
+func multiply(a: Int, b: Int) -> Int {
+    var product: Int = a * b;
+    return product;
+}
+
+// Show the no return
+func printHello() {
+    print("hello");
+    return;
+}
+
+func main() {
+    var factor1: Int = 6;
+    var factor2: Int = 7;
+    var result: Int;
+
+    result = multiply(factor1, factor2); 
+
+    // Realizing this maybe string concatenation 
+    // could be a thing in the future
+    print("Result of ");
+    print(factor1);
+    print(" * ");
+    print(factor2);
+    print(" is: ");
+    print(result);
+    print("\n");
+
+
+    printHello(); // will print out hello
+}

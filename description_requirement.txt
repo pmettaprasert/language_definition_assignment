@@ -1,0 +1,176 @@
+I like Python and I am most comfortable with Python. But there are a couple of features that I would like to implement such as static typing and semicolons. Reasoning is that it is hard sometimes what python will return or what it needs. It doesn't give enough clues. Second is that the whitespace and the indenting is nice. But looking at long python code can be pretty disorganized. I like the curly braces too so we will add that.
+
+New language will be called Pythos.
+
+
+Language Requirements:
+
+1. Functions/procedures/subroutines/whatever you want to call them according to the following definition:
+ * self-contained sequences of statements that can only be started from the first statement in the sequence
+ * has its own lexical scope
+ * can be called from elsewhere in the program (or from itself)
+ * can take an initial set of variables from its caller
+ * can return a variable to its caller
+
+
+For this I would like use the func keyword to explicitly state that it is a Functions
+
+syntax is:
+
+func functionName(param1: Type1, param2: Type2) -> ReturnType { 
+    some statements  ; 
+    return value; 
+}
+
+so clear typing. Clear return value type. No return value just omit the -> ReturnType and use return;
+
+so still pythonic. 
+
+Hopefully I can produce the rest of the requirements to have its own lexical scope and other functionality but for now this is how I would write a function.
+
+
+2. Branching logic, i.e. the ability to control which of a set of statements is executed based on an expression evaluated at runtime
+
+Uses if, elif (because it is shorter than else if) and else
+
+if condition {
+    some statements;
+    ... ;
+} else if other_condition {
+    some statements;
+    ... ;
+} else {
+    some statements;
+    ... ;
+}
+
+So yea. The bracke gives a nice wrap around the code. I would like to keep the same and, or, not because it is readable. Same comparison operators like ==, != (just because I am used to it)
+
+3. Looping logic, i.e. the ability to repeat a set of statements some number of times based on an expression evaluated at runtime
+
+I guess we can try to be more explicit. We can use the keyword loop to start a loop. But still use for and while.
+
+
+loop while condition { ... statements ... ; }
+
+Loops as long as its true
+loop indexVariable from startValue to endValue { ... statements ... ; }
+
+I don't know what the other assignments are but for now we will just go with ints. I am not sure if I can implement an iterator?
+
+loop i from 0 to 5 { ... } but for now it would look something like this starting from 0 to 4 (0, 1, 2, 3, 4).
+
+
+4. Definitions for composite types (structs/records/etc.), i.e. data types that consist of one or more fields, each of which may be a simple or composite data type
+
+Just use struct. Borrow it from C++. Syntax is very similar
+
+struct StructName { 
+    field1: Type1; 
+    field2: Type2; 
+}
+
+can be other structs as well
+
+
+5. Strongly-typed local variables
+
+I guess I didn't have choice. So it will be strongly typed. We will use the keyword var.
+
+var variableName: Type;
+var variableName: Type = initialValue;
+
+Don't know if I have to decide whether to force an initialValue or default to an empty object or zero. Not sure
+
+6. Accessing and modifying fields of composite types and elements of arrays
+
+For structs or reference to something else use a dot (.)
+
+struct_name.fieldName
+
+
+For arrays stick to the python of using []
+
+array[index]
+
+7. Some way of associating additional scope with a function, either via classes or nested/lambda functions
+
+Uhhhh. I'm not so sure about this.
+
+func outer(x: Int) {
+    var y: Int = 10;
+    func inner(z: Int) -> Int {
+        return x + y + z;
+    }
+    var result: Float = inner(5)
+    print(result);
+}
+
+If x is 5 should return 20.
+
+maybe something like this? To have inner functions.
+
+
+8. Multi-line comments
+
+Single line is //
+Multiline is /* */
+
+9. Built-in functions for printing to and reading from the console
+
+print(value); will print the valu. Newline has to be explicitly stated.
+readString() -> String;   Reads a line of text from the console and returns a String
+readInt() -> Int
+
+
+It will support Float, Strings, fixed sized array (arrays will be defined like this Array<Type, Size>) that way it is clear and explicit. And struct as the composite type.
+
+
+
+Open Questions:
+
+valid identfier: same rules a-zA-Z no numbers in the beginning
+
+numeric: two? float and int for now
+
+Character: I think just go straight to String
+
+Literals: 
+Float: 1.0, -233.54, 0.0, 1.23e-4 
+String: "Hello" (only double quotes)
+Array: var nums: Array<Float, 3>;
+nums[0] = 1.1
+
+Structs: 
+struct Point {
+    x: Float;
+    y: Float;
+}
+
+var point1 = Point;
+point1.x = 0.0;
+point1.y = 0.0;
+
+
+Program start: 
+
+func main() {}
+
+
+Statement termination: 
+The semicolon ;
+
+Ternaries: 
+I think just stick to the if else for now.
+
+
+Pass By reference/Move semantics:
+
+literals like float and int.
+
+String Array and struct are passed by reference
+
+
+Reference Types Locally: 
+no clue
+

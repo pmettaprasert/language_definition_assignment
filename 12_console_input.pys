@@ -1,0 +1,28 @@
+/*
+* readString() to read from console
+* readInt() to read from Console
+*/
+
+func main() {
+    var userName: String;
+
+    print("Please enter your name: ");
+    userName = readString();
+
+    // Print the greeting
+    print("Hello, ");
+    print(userName);
+    print("! Welcome.\n");
+
+    var userNumber: Int;
+
+    // Read and parse to Int
+    print("Please enter an integer: ");
+    userNumber = readInt(); 
+
+    // Print the number entered
+    print("You entered the number: ");
+    print(userNumber);
+    print("\n");
+    
+}

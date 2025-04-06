@@ -1,0 +1,19 @@
+/ *
+* Showing variables and declaration
+* /
+
+
+func main() {
+    var p: Float;
+    var hello: String;
+
+    p = 10.0;
+    hello = "Hello";
+
+    print("The number is ");
+    print(p);
+    print("\n");
+
+    print("The message is ");
+    print(hello);
+}

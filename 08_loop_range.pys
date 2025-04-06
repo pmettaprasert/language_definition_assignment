@@ -1,0 +1,18 @@
+/*
+* Just a simple for loop
+*/
+
+func main() {
+    // Loop from 0 up to  3
+    loop i from 0 to 3 {
+        print("Iteration: ");
+        print(i); 
+        print("\n");
+    }
+
+    // Should print out
+    //0
+    //1
+    //2
+    
+}

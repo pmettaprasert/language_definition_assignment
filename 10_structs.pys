@@ -1,0 +1,71 @@
+
+/*
+*Shows how to use a struct
+*/
+
+struct Coord {
+    x: Float;
+    y: Float;
+}
+
+
+struct Line {
+    start: Coord; // A field whose type is the Coord struct
+    end: Coord;   // Another field of type Coord
+    name: String; // Can still contain other types
+}
+
+func main() {
+
+    //type Coord
+    var p1: Coord; 
+
+    // Still don't know if I need to intialize it 
+    // but for now it has a default value
+    p1.x = 0.0; // Explicit initialization is safer
+    p1.y = 0.0;
+
+    print("Initial Vector: ("); 
+    print(p1.x); 
+    print(", ");
+    print(p1.y); 
+    print(")\n");
+
+    // Assign new values to fields
+    p1.x = 6.9;
+    p1.y = 6.9;
+
+    print("Updated Vector: ("); 
+    print(p1.x); print(", "); 
+    print(p1.y); 
+    print(")\n");
+
+
+
+    // Declare a variable of the *new* struct type
+    var pathSegment: Line;
+
+    // Initialize fields, including the fields within the nested structs
+    pathSegment.name = "Blah";
+
+    
+    pathSegment.start.x = 1.0;
+    pathSegment.start.y = 2.0;
+
+    pathSegment.end.x = 5.5;
+    pathSegment.end.y = -3.0;
+
+    
+    // Should show the start x y and end x y
+    print("Line Start: (");
+    print(pathSegment.start.x); 
+    print(", ");
+    print(pathSegment.start.y); /
+    print(")\n");
+
+    print("Line End: (");
+    print(pathSegment.end.x);   
+    print(", ");
+    print(pathSegment.end.y);   
+    print(")\n");
+}

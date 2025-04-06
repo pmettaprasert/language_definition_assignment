@@ -1,0 +1,29 @@
+/*
+* Just going to show the basic math operation
+*/
+
+func main() {
+    var a: Int = 20;
+    var b: Int = 7;
+
+
+    var sum: Int = a + b;
+    print("Sum: "); 
+    print(sum); 
+    print("\n");
+
+    var diff: Int = a - b;
+    print("Difference: "); 
+    print(diff); 
+    print("\n");
+
+    var prod: Int = a * b;
+    print("Product: "); 
+    print(prod); 
+    print("\n");
+
+    var quot: Int = a / b; 
+    print("Quotient (20 / 7): "); 
+    print(quot); //should return 2
+    print("\n");
+}

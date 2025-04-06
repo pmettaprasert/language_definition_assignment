@@ -1,0 +1,16 @@
+/ *
+* Should show a while loop
+*/
+
+func main() {
+
+    // Just a simple countdown loop
+    var countdown: Int = 3;
+
+    loop while countdown > 0 {
+        print(countdown);
+        print("/n");
+        countdown = countdown - 1;
+    }
+   
+}

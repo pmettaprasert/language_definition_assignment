@@ -1,0 +1,8 @@
+/*
+ * Shows a simple Hello, Pythos!
+ * Shows entry point and prints out a string.
+ */
+
+func main() {
+    print("Hello, Pythos!");
+}

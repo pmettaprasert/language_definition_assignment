@@ -1,0 +1,24 @@
+/*
+* Nested function
+*/
+
+// This is the decorator pattern almost. 
+func outerFunc(x: Int) {
+    
+    func innerFunc(y: Int) -> Int {
+        // Can access 'x' from outerFunc's scope and 'y' from its own scope
+        return x + y;
+    }
+
+    // Call the nested function and print its result
+    var calculated_value: Int = innerFunc(5); 
+    print("Result: ");
+    print(calculated_value); 
+    print("\n");
+}
+
+func main() {
+  
+    // If x=10 and innerFunc is called with y=5, the result is 10 + 5 = 15.
+    outerFunc(10);
+}
